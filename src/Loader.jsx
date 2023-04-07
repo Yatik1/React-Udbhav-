@@ -1,15 +1,24 @@
 import React from 'react'
-import logo from '../public/logo.png'
+import loadImage from '../public/loadback.jpg'
 
 function Loader() {
   return (
-    <div className='h-screen w-screen bg-black text-white font-bold flex justify-center items-cente'>
-        <div className='my-[50vh]'>
-          <image src = {logo} alt= 'loading .'/>
+    <div className='h-screen w-screen text-white font-bold flex justify-center items-center'
+    
+    style={{
+      backgroundImage: `url(${loadImage})`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center center',
+      backgroundAttachment: 'fixed',
 
-           . . . . . . . . . . 
-
-          </div> 
+     }}   
+    
+    >
+         
+         <div className='w-[50vh] h-fit'>
+           <img src = "../public/loadimage.png" alt= 'loading .'/>
+         </div>
     </div>
   )
 }

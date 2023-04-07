@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 import "./count.css";
 
-const COUNTDOWN_TARGET = new Date("2023-06-31T23:59:59");
+const COUNTDOWN_TARGET = new Date("2023-04-28T23:59:59");
 
 const getTimeLeft = () => {
 	const totalTimeLeft = COUNTDOWN_TARGET - new Date();
-	const days = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
-	const hours = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
-	const minutes = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
-	const seconds = Math.floor((totalTimeLeft / 1000) % 60);
-	return { days, hours, minutes, seconds };
+	const Days = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
+	const Hours = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
+	const Min = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
+	const Sec = Math.floor((totalTimeLeft / 1000) % 60);
+	return { Days, Hours, Min, Sec };
 };
 
 const Countdown = () => {
@@ -27,7 +27,6 @@ const Countdown = () => {
 
 	return (
 		<div className='countdown'>
-			<h2>Countdown</h2>
 			<div className='content'>
 				{Object.entries(timeLeft).map((el) => {
 					const label = el[0];
