@@ -17,7 +17,7 @@ const Home = () => {
 
        }}      
     >
-       <div className="top-10 h-full w-full fixed ml-10 px-2">  
+       <div className="top-10 h-screen ml-0">  
           <div className="h-full w-full" >    {/*  style={{ top: coordinates.y, left: coordinates.x }} */}
              <Spline scene="https://prod.spline.design/vakXcAJXStGdHotW/scene.splinecode" />
           </div>
