@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Spline from '@splinetool/react-spline';
 import './Home.css'
 
 const Home = () => {
@@ -37,10 +38,10 @@ const Home = () => {
     <div className="h-full w-full fixed top-0 left-0" onMouseMove={handleMouseMove}>
       {renderUdbhavTexts()}
       <div
-        className="udbhav-text-hover"
-        style={{ top: coordinates.y, left: coordinates.x }}
+        className="h-full w-full z-[999999]"
+        // style={{ top: coordinates.y, left: coordinates.x }}
       >
-        UDBHAV2k23
+        <Spline scene="https://prod.spline.design/GLhoxu-ahLYvKqeO/scene.splinecode" />
       </div>
     </div>
     </div>
